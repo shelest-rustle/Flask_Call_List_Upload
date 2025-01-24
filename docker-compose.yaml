@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  flask_app:
+    build: .
+    ports:
+      - ${FLASK_PORT}  # Прокси для порта 5000
+    volumes:
+      - .:/app  # Монтируем текущую директорию в контейнер
